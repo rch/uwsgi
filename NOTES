@@ -1,0 +1,13 @@
+# Building the JVM support
+# https://uwsgi-docs.readthedocs.io/en/latest/JVM.html#building-the-jvm-support
+
+$ system_profiler SPSoftwareDataType
+Software:
+
+    System Software Overview:
+
+      System Version: macOS 10.14.4 (18E226)
+      Kernel Version: Darwin 18.5.0
+
+$ UWSGICONFIG_JVM_INCPATH=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/include UWSGICONFIG_JVM_LIBPATH=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/lib/server python uwsgiconfig.py --plugin plugins/jvm default
+
